@@ -2,12 +2,11 @@
 @section('content')
 
 <div class="container-xxl flex-grow-1 container-p-y">
-    {{-- <h6 class="fw-bold"><a href="{{ route('contact.index') }}" class="text-muted fw-light">Contact/</a>Contact List</h6> --}}
-    <h2 class="fw-bold">Sender Address</h2>
+    <h2 class="fw-bold">Semua Kontak</h2>
     {{-- <h6 class="fw-bold">Manage Sender Address</h6> --}}
     <div class="d-flex justify-content-between">
-        <h5 class="d-inline">You cant manually validate template individual email address .</h5>
-        <a href="{{ route('sender.create') }}" class="btn btn-primary">+ Tambah sender</a>
+        <h5 class="d-inline">This listing works like an archive with all your contact.</h5>
+        <a href="{{ route('contact.create') }}" class="btn btn-primary">Export List</a>
     </div>
 
     <!-- Basic Layout & Basic with Icons -->
@@ -28,17 +27,15 @@
         <thead>
           <tr class="text-nowrap">
             <th>No</th>
-            <th>Label</th>
-            <th>Domain</th>
-            <th>Email Address</th>
-            <th>Type</th>
-            <th>Status</th>
+            <th>Email</th>
+            <th>Sent</th>
+            <th>Delivered</th>
+            <th>Added</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
@@ -50,11 +47,9 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
-            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">3</th>
-            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
@@ -66,7 +61,6 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
-            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">5</th>
@@ -74,11 +68,9 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
-            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">6</th>
-            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>

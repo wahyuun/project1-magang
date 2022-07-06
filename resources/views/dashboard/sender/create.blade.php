@@ -18,7 +18,7 @@
               <div class="row mb-3">
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Email Penerima</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-name" placeholder="John Doe" />
+                  <input type="text" class="form-control" id="basic-default-name" placeholder="Masukan Email Penerima" />
                 </div>
               </div>
               <div class="row mb-3">
@@ -28,17 +28,17 @@
                     type="text"
                     class="form-control"
                     id="basic-default-company"
-                    placeholder="ACME Inc."
+                    placeholder="Masukan Subject"
                   />
                 </div>
               </div>
               <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-default-message">Message</label>
+                <label class="col-sm-2 col-form-label" for="basic-default-message">Pesan</label>
                 <div class="col-sm-10">
                   <textarea
                     id="basic-default-message"
                     class="form-control"
-                    placeholder="Hi, Do you have a moment to talk Joe?"
+                    placeholder="Masukan Pesan"
                     aria-label="Hi, Do you have a moment to talk Joe?"
                     aria-describedby="basic-icon-default-message2"
                   ></textarea>
@@ -79,8 +79,8 @@
                     <label class="form-check-label" for="defaultRadio2"> Both/Dll </label>
                   </div>
 
-                <button type="button" class="btn btn-primary mt-4">ADD</button>
-                <button type="button" class="btn btn-outline-secondary mt-4">CANCEL</button>
+                <button type="button" class="btn btn-primary mt-4">TAMBAH</button>
+                <button type="button" class="btn btn-outline-secondary mt-4">BATAL</button>
 
             </form>
           </div>

@@ -6,7 +6,7 @@
     {{-- <h6 class="fw-bold">Manage Sender Address</h6> --}}
     <div class="d-flex justify-content-between">
         <h5 class="d-inline">Manage your contact in list to easily send campaigns and automated email workflows.</h5>
-        <a href="{{ route('contact.create') }}" class="btn btn-primary">+ Create a contact list</a>
+        <a href="{{ route('contact.create') }}" class="btn btn-primary">+ Tambah Kontak</a>
     </div>
 
     <!-- Basic Layout & Basic with Icons -->
@@ -27,10 +27,8 @@
         <thead>
           <tr class="text-nowrap">
             <th>No</th>
-            <th>Label</th>
-            <th>Domain</th>
-            <th>Email Address</th>
-            <th>Type</th>
+            <th>Name</th>
+            <th>Subscribers</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -40,13 +38,9 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">2</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
@@ -56,13 +50,9 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">4</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
@@ -72,13 +62,9 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">6</th>
-            <td>Table cell</td>
-            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>

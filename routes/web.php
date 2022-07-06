@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\SenderController;
-use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\ContactController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,3 +37,10 @@ Route::get('/contact',[ContactController::class,'index'])->name('contact.index')
 
 Route::get('/contact/create',[ContactController::class,'create'])->name('contact.create');
 
+Route::get('/contact/allcontact',[ContactController::class,'all'])->name('contact.all');
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/akun/create',[RegisterController::class,'create'])->name('akun.create');

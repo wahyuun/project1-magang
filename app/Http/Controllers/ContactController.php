@@ -27,6 +27,11 @@ class ContactController extends Controller
         return view('dashboard.kontak.createContact');
     }
 
+    public function all()
+    {
+        return view('dashboard.kontak.allContact');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

@@ -36,6 +36,8 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
+
+
 @include('dashboard.layouts.asside')
 
         <!-- Layout container -->
@@ -50,7 +52,6 @@
             <!-- / Content -->
 
 @include('dashboard.layouts.footer')
-
             <div class="content-backdrop fade"></div>
           </div>
           <!-- Content wrapper -->

@@ -1,5 +1,5 @@
 @extends('dashboard.layouts.main')
 @section('content')
 
-yfyfyty
+<a href="{{ route('login') }}">Login</a>
 @endsection

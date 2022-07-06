@@ -14,7 +14,7 @@
 
             <ul class="menu-inner py-1">
               <!-- Dashboard -->
-              <li class="menu-item active">
+              <li class="menu-item {{ Request::has('/dashboard*') }}">
                 <a href="index.html" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-home-circle"></i>
                   <div data-i18n="Analytics">Dashboard</div>
@@ -22,43 +22,50 @@
               </li>
 
               <!-- Extended components -->
-            <li class="menu-item">
+            <li class="menu-item {{ Request::is('contact*') ? 'active' : '' }}">
                 <a href="javascript:void(0)" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-copy"></i>
-                  <div data-i18n="Extended UI">Kontak</div>
+                  <div data-i18n="Extended UI">Manajemen Kontak</div>
                 </a>
                 <ul class="menu-sub">
-                  <li class="menu-item">
+                  <li class="menu-item {{ Request::is('contact') ? 'active' : '' }}">
                     <a href="{{ route('contact.index') }}" class="menu-link">
-                      <div data-i18n="Perfect Scrollbar">Kontak List</div>
+                      <div data-i18n="Perfect Scrollbar" class="active">List Kontak</div>
                     </a>
                   </li>
-                  <li class="menu-item">
-                    <a href="extended-ui-text-divider.html" class="menu-link">
+                  <li class="menu-item {{ Request::is('contact/allcontact') ? 'active' : '' }}">
+                    <a href="{{ route('contact.all') }}" class="menu-link">
                       <div data-i18n="Text Divider">Semua Kontak</div>
                     </a>
                   </li>
                 </ul>
               </li>
 
-              <li class="menu-item">
+              <li class="menu-item {{ Request::is('email-marketing') ? 'active' : '' }}">
                 <a href="{{ route('email.index') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-collection"></i>
-                  <div data-i18n="Basic">Email Marketing</div>
+                  <div data-i18n="Basic">Marketing Email</div>
                 </a>
               </li>
 
-              <li class="menu-item">
+              <li class="menu-item {{ Request::is('email-sender') ? 'active' : '' }}">
                 <a href="{{ route('sender.index') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-collection"></i>
-                  <div data-i18n="Basic">Manage Sender Address</div>
+                  <div data-i18n="Basic">Manajemen Alamat Pengirim</div>
                 </a>
               </li>
 
-              <li class="menu-item">
+              <li class="menu-item {{ Request::is('laporan') ? 'active' : '' }}">
                 <a href="{{ route('laporan') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-collection"></i>
                   <div data-i18n="Basic">Laporan</div>
+                </a>
+              </li>
+
+              <li class="menu-item {{ Request::is('akun.create') ? 'active' : '' }}">
+                <a href="{{ route('register') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-collection"></i>
+                  <div data-i18n="Basic">Akun</div>
                 </a>
               </li>
 

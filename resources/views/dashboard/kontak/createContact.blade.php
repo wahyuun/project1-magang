@@ -18,7 +18,7 @@
               <div class="row mb-3">
                 <label class="col-sm-2 col-form-label" for="basic-default-name">Nama</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="basic-default-name" placeholder="John Doe" />
+                  <input type="text" class="form-control" id="basic-default-name" placeholder="Masukan Nama" />
                 </div>
               </div>
               <div class="row mb-3">
