@@ -62,8 +62,8 @@
                 </a>
               </li>
 
-              <li class="menu-item {{ Request::is('akun.create') ? 'active' : '' }}">
-                <a href="{{ route('register') }}" class="menu-link">
+              <li class="menu-item {{ Request::is('register') ? 'active' : '' }}">
+                <a href="{{ route('create.account') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bx-collection"></i>
                   <div data-i18n="Basic">Akun</div>
                 </a>

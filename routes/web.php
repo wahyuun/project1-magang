@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -19,8 +20,15 @@ use App\Http\Controllers\LaporanController;
 |
 */
 
-Auth::routes();
+// Auth::routes();
 
+Route::get('/LoginBaru', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
+Route::post('/LoginBaru', [LoginController::class, 'login'])->name('login')->middleware('guest');
+
+Route::get('/create-account', [RegisterController::class, 'showRegistrationForm'])->name('create.account')->middleware('auth');
+Route::post('/register', [RegisterController::class, 'register'])->name('register')->middleware('auth');
+
+Route::post('/logout',[LoginController::class,'logout'])->name('logout');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -39,8 +47,5 @@ Route::get('/contact/create',[ContactController::class,'create'])->name('contact
 
 Route::get('/contact/allcontact',[ContactController::class,'all'])->name('contact.all');
 
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::get('/akun/create',[RegisterController::class,'create'])->name('akun.create');
+
