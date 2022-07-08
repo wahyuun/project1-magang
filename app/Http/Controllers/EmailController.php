@@ -14,7 +14,9 @@ class EmailController extends Controller
      */
     public function index()
     {
-        return view('dashboard.emailMarketing.index');
+        return view('dashboard.emailMarketing.index', [
+            'title' => ' Techno | Email',
+        ]);
     }
 
     /**

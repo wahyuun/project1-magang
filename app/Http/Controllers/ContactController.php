@@ -14,7 +14,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('dashboard.kontak.index');
+        return view('dashboard.kontak.index', [
+            'title' => 'Techno | Contact',
+        ]);
     }
 
     /**
@@ -24,12 +26,16 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('dashboard.kontak.createContact');
+        $title = 'Techno | Create Contact';
+
+        return view('dashboard.kontak.createContact', compact('title'));
     }
 
     public function all()
     {
-        return view('dashboard.kontak.allContact');
+        $title = 'Techo | All Contact';
+
+        return view('dashboard.kontak.allContact', compact('title'));
     }
 
     /**

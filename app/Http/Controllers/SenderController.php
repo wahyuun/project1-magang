@@ -14,7 +14,9 @@ class SenderController extends Controller
      */
     public function index()
     {
-        return view('dashboard.sender.index');
+        $title = ' Techno | Sender';
+
+        return view('dashboard.sender.index', compact('title'));
     }
 
     /**
@@ -24,7 +26,9 @@ class SenderController extends Controller
      */
     public function create()
     {
-        return view('dashboard.sender.create');
+        $title = ' Techno | Sender ';
+
+        return view('dashboard.sender.create', compact('title'));
     }
 
     /**

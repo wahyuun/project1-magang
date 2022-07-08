@@ -15,6 +15,11 @@ return new class extends Migration
     {
         Schema::create('senders', function (Blueprint $table) {
             $table->id();
+            $table->string('label');
+            $table->string('email')->unique();
+            $table->string('type');
+            $table->enum('status', ['1', '2', '3'])->default('3');
+            $table->string('domain');
             $table->timestamps();
         });
     }

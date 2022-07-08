@@ -2,10 +2,10 @@
 @section('content')
 
 <div class="container-xxl flex-grow-1 container-p-y">
-    <h2 class="fw-bold">Contact List</h2>
+    <h2 class="fw-bold">List Kontak</h2>
     {{-- <h6 class="fw-bold">Manage Sender Address</h6> --}}
     <div class="d-flex justify-content-between">
-        <h5 class="d-inline">Manage your contact in list to easily send campaigns and automated email workflows.</h5>
+        <h5 class="d-inline">Tabel berisi seluruh data email marketing.</h5>
         <a href="{{ route('contact.create') }}" class="btn btn-primary">+ Tambah Kontak</a>
     </div>
 
@@ -22,13 +22,15 @@
 <!-- Responsive Table -->
 
 <div class="card">
-    <div class="table-responsive text-nowrap">
-      <table class="table">
+    <div class="table-responsive text-nowrap p-3">
+      <table class="table table-stripped" id="tableKontakList">
         <thead>
           <tr class="text-nowrap">
             <th>No</th>
             <th>Name</th>
             <th>Subscribers</th>
+            <th>Dibuat</th>
+            <th>Diubah</th>
             <th>Status</th>
           </tr>
         </thead>
@@ -38,9 +40,13 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">2</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
@@ -50,9 +56,13 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">4</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
@@ -62,9 +72,13 @@
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
           </tr>
           <tr>
             <th scope="row">6</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>

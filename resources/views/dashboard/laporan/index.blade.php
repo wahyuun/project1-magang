@@ -6,7 +6,8 @@
     <h2 class="fw-bold">Laporan</h2>
     {{-- <h6 class="fw-bold">Manage Sender Address</h6> --}}
     <div class="d-flex justify-content-between">
-        <h5 class="d-inline">You cant manually validate template individual email address .</h5>
+        <h5 class="d-inline">Tabel berisi seluruh data email marketing.</h5>
+        <a href="{{ route('contact.create') }}" class="btn btn-primary">Export List</a>
     </div>
 
     <!-- Basic Layout & Basic with Icons -->
@@ -22,8 +23,8 @@
 <!-- Responsive Table -->
 
 <div class="card">
-    <div class="table-responsive text-nowrap">
-      <table class="table">
+    <div class="table-responsive text-nowrap p-3">
+      <table class="table table-stripped" id="tableLaporan">
         <thead>
           <tr class="text-nowrap">
             <th>No</th>

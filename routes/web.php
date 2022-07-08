@@ -2,12 +2,12 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EmailController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\SenderController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EmailController;
-use App\Http\Controllers\SenderController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,32 +20,58 @@ use App\Http\Controllers\LaporanController;
 |
 */
 
+// Auth Routes
 // Auth::routes();
-
-Route::get('/LoginBaru', [LoginController::class, 'showLoginForm'])->name('login')->middleware('guest');
-Route::post('/LoginBaru', [LoginController::class, 'login'])->name('login')->middleware('guest');
-
-Route::get('/create-account', [RegisterController::class, 'showRegistrationForm'])->name('create.account')->middleware('auth');
-Route::post('/register', [RegisterController::class, 'register'])->name('register')->middleware('auth');
-
-Route::post('/logout',[LoginController::class,'logout'])->name('logout');
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('guest')->group(function () {
+    Route::get('/', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('/', [LoginController::class, 'login'])->name('login');
 });
 
-Route::get('/email-marketing',[EmailController::class,'index'])->name('email.index');
+// Middleware Auth
+Route::middleware(['guest'])->group(function () {
+    // Create Account
+    Route::get('/create-account', [RegisterController::class, 'showRegistrationForm'])->name('create.account');
+    Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
-Route::get('/email-sender',[sendercontroller::class,'index'])->name('sender.index');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/email-sender/create',[sendercontroller::class,'create'])->name('sender.create');
+    // Dashboard
+    Route::get('/dashboard', function () {
+        $title = 'Techo | Dashboard';
 
-Route::get('/laporan',[laporanController::class,'index'])->name('laporan');
+        return view('dashboard.index', compact('title'));
+    })->name('dashboard');
 
-Route::get('/contact',[ContactController::class,'index'])->name('contact.index');
+    // Email Marketing
+    Route::group(['prefix' => 'email-marketing', 'controller' => EmailController::class], function () {
+        Route::get('', 'index')->name('email.index');
+    });
+    // Laravel Manager
+    Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+        \UniSharp\LaravelFilemanager\Lfm::routes();
+    });
+    // Email Sender
+    Route::group(['prefix' => 'email-sender', 'controller' => SenderController::class], function () {
+        Route::get('', 'index')->name('sender.index');
+        Route::get('/create', 'create')->name('sender.create');
+    });
 
-Route::get('/contact/create',[ContactController::class,'create'])->name('contact.create');
+    // Laporan
+    Route::group(['prefix' => 'laporan', 'controller' => laporanController::class], function () {
+        Route::get('', 'index')->name('laporan');
+    });
 
-Route::get('/contact/allcontact',[ContactController::class,'all'])->name('contact.all');
+    // Contact
+    Route::group(['prefix' => 'contact', 'controller' => ContactController::class], function () {
+        Route::get('', 'index')->name('contact.index');
 
-Route::get('/akun/create',[RegisterController::class,'create'])->name('akun.create');
+        Route::get('/create', 'create')->name('contact.create');
 
+        Route::get('/allcontact', 'all')->name('contact.all');
+    });
+
+    // Account
+    Route::group(['prefix' => 'akun', 'controller' => RegisterController::class], function () {
+        Route::get('/create', 'create')->name('akun.create');
+    });
+});

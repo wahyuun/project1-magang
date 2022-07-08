@@ -4,7 +4,9 @@
 <!-- Content -->
 <div class="container-xxl flex-grow-1 container-p-y">
     <h6 class="fw-bold"><a href="{{ route('contact.index') }}" class="text-muted fw-light">Daftar Kontak/</a>Tambah Kontak</h6>
-    <h2 class="fw-bold py-3 mb-4">Tambah Kontak</h2>
+    <h2 class="fw-bold">Tambah Kontak</h2>
+    <h5 class="mb-5">Manajemen kontakmu dengan format CSV dan manual.</h5>
+
 
     <!-- Basic Layout & Basic with Icons -->
     <div class="row">

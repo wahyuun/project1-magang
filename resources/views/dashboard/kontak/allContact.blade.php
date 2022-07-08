@@ -5,7 +5,7 @@
     <h2 class="fw-bold">Semua Kontak</h2>
     {{-- <h6 class="fw-bold">Manage Sender Address</h6> --}}
     <div class="d-flex justify-content-between">
-        <h5 class="d-inline">This listing works like an archive with all your contact.</h5>
+        <h5 class="d-inline">Tabel bermuat seluruh list kontak</h5>
         <a href="{{ route('contact.create') }}" class="btn btn-primary">Export List</a>
     </div>
 
@@ -22,15 +22,15 @@
 <!-- Responsive Table -->
 
 <div class="card">
-    <div class="table-responsive text-nowrap">
-      <table class="table">
+    <div class="table-responsive text-nowrap p-3">
+      <table class="table table-stripped" id="tableAllKontak">
         <thead>
           <tr class="text-nowrap">
             <th>No</th>
             <th>Email</th>
-            <th>Sent</th>
-            <th>Delivered</th>
-            <th>Added</th>
+            <th>Terkirim</th>
+            <th>Terkirim</th>
+            <th>Ditambahkan</th>
           </tr>
         </thead>
         <tbody>

@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('laporans', function (Blueprint $table) {
             $table->id();
+            $table->string('subject');
+            $table->string('sender');
+            $table->string('receiver');
+            $table->boolean('status');
             $table->timestamps();
         });
     }

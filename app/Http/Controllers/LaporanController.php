@@ -14,7 +14,9 @@ class LaporanController extends Controller
      */
     public function index()
     {
-        return view('dashboard.laporan.index');
+        $title = 'Techno | Report';
+
+        return view('dashboard.laporan.index', compact('title'));
     }
 
     /**
