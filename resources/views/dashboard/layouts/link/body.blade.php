@@ -48,11 +48,11 @@
 </script>
 {{-- CKEditor4 CDN END --}}
 
-{{-- DataTables START --}}
+{{-- DataTables 5 START --}}
 {{-- <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.12.1/datatables.min.js"></script> --}}
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.12.1/datatables.min.js"></script>
 <script>
-        $(document).ready( function () {
+    $(document).ready( function () {
         $('#tableMarketing').DataTable({
             "lengthMenu": [
             [ 10, 25, 50, 100, 1000, -1 ],
@@ -101,12 +101,12 @@
 
 {{-- SELECT2 START --}}
 
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.penerima').select2({
-                placeholder: "Pilih email penerima"
-            });
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.penerima').select2({
+            placeholder: "Pilih email penerima"
         });
-        </script>
-        {{-- SELECT2 END --}}
+    });
+</script>
+{{-- SELECT2 END --}}
